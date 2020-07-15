@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Frontend/Tayana.Master" AutoEventWireup="true" CodeBehind="Dealers.master.cs" Inherits="Tayana.Frontend.Dealers" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
+    <!--遮罩-->
+    <div class="bannermasks">
+        <img src="images/DEALERS.jpg" alt="&quot;&quot;" width="967" height="371" />
+    </div>
+    <!--遮罩結束-->
+    <!--------------------------------換圖開始---------------------------------------------------->
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="images/newbanner.jpg" alt="Tayana Yachts" />
+            </li>
+        </ul>
+    </div>
+    <!--------------------------------換圖結束---------------------------------------------------->
+    <div class="conbg">
+        <!--------------------------------左邊選單開始---------------------------------------------------->
+        <div class="left">
+            <div class="left1">
+                <p><span>DEALERS</span></p>
+                <ul>
+                    <asp:Repeater ID="DealerRepeater" runat="server">
+                        <ItemTemplate>
+                            <li>
+                                <asp:HyperLink ID="DealersMenu" runat="server" Text='<%# Eval("country") %>'
+                                    NavigateUrl='<%# $"dealers.aspx?id={Eval("country_id")}" %>' ClientIDMode="Static" />
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+            </div>
+        </div>
+        <!--------------------------------左邊選單結束---------------------------------------------------->
+
+        <!--------------------------------右邊選單開始---------------------------------------------------->
+        <%--<div id="crumb">
+            <a href="index.aspx">Home</a> >> <a href="#">Dealers</a> >>
+            <a href="#">
+                <asp:Label ID="Label1" runat="server" Text="" ClientIDMode="Static"></asp:Label>
+                <span class="on1">Unite States</span>
+            </a>
+        </div>
+        <div class="right">
+            <div class="right1">
+                <div class="title">
+                    <asp:Label ID="Label2" runat="server" Text="" ClientIDMode="Static"></asp:Label>
+                    <span>Unite States</span>
+                </div>--%>
+                <!--------------------------------內容開始---------------------------------------------------->
+                <asp:ContentPlaceHolder ID="dealersContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--------------------------------內容結束------------------------------------------------------>
+           <%-- </div>
+        </div>--%>
+        <!--------------------------------右邊選單結束---------------------------------------------------->
+    </div>
+</asp:Content>

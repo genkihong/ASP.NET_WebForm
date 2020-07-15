@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Tayana.Master.cs" Inherits="Tayana.Frontend.Tayana" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TtayanaWorld</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/homestyle.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="contain">
+            <div class="sub">
+                <p><a href="index.aspx">Home</a></p>
+            </div>
+            <div id="logol">
+                <a href="index.aspx">
+                    <img src="images/logo001.gif" alt="Tayana" />
+                </a>
+            </div>
+            <!--------------------------------選單開始---------------------------------------------------->
+            <div class="menu">
+                <ul>
+                    <li class="menuli01"><a href="yacht_overview.aspx">Yachts</a></li>
+                    <li class="menuli02"><a href="news_list.aspx">NEWS</a></li>
+                    <li class="menuli03"><a href="company01.aspx">COMPANY</a></li>
+                    <li class="menuli04"><a href="dealers.aspx">DEALERS</a></li>
+                    <li class="menuli05"><a href="contact.aspx">CONTACT</a></li>
+                </ul>
+            </div>
+            <!--------------------------------選單開始結束------------------------------------------------->
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <!--------------------------------落款開始---------------------------------------------------->
+            <div class="footer">
+                <p class="footerp01">© 1973-2011 Tayana Yachts, Inc. All Rights Reserved</p>
+                <div class="footer01">
+                    <span>No. 60, Hai Chien Road, Chung Men Li, Lin Yuan District, Kaohsiung City, Taiwan, R.O.C.</span><br />
+                    <span>TEL：+886(7)641-2721</span> <span>FAX：+886(7)642-3193</span><span><a href="mailto:tayangco@ms15.hinet.net">E-mail：tayangco@ms15.hinet.net</a>.</span>
+                </div>
+            </div>
+            <!--------------------------------落款結束---------------------------------------------------->
+        </div>
+    </form>
+    <asp:ContentPlaceHolder ID="scriptContent" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

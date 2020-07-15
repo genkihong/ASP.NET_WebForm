@@ -1,0 +1,865 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFF5AAEB-7962-4A83-A1CF-760F3E90078C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tayana</RootNamespace>
+    <AssemblyName>Tayana</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44383</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder">
+      <HintPath>Backend\Scripts\ckfinder\bin\Release\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Backend\AddCountry.aspx" />
+    <Content Include="Backend\AddRegion.aspx" />
+    <Content Include="Backend\AddUser.aspx" />
+    <Content Include="Backend\AddYachtList.aspx" />
+    <Content Include="Backend\AddYachtModel.aspx" />
+    <Content Include="Backend\AddYachtLayout.aspx" />
+    <Content Include="Backend\AddYachtOverView.aspx" />
+    <Content Include="Backend\AddYachtPhoto.aspx" />
+    <Content Include="Backend\AddYachtSpecification.aspx" />
+    <Content Include="Backend\admin.aspx" />
+    <Content Include="Backend\AddDealers.aspx" />
+    <Content Include="Backend\BackstagePagination.ascx" />
+    <Content Include="Backend\CountryList.aspx" />
+    <Content Include="Backend\DealersList.aspx" />
+    <Content Include="Backend\Index.aspx" />
+    <Content Include="Backend\AddNews.aspx" />
+    <Content Include="Backend\NewsList.aspx" />
+    <Content Include="Backend\RegionList.aspx" />
+    <Content Include="Backend\Scripts\all.js" />
+    <Content Include="Backend\UpdateDealers.aspx" />
+    <Content Include="Backend\UpdateNews.aspx" />
+    <Content Include="Backend\UpdateUser.aspx" />
+    <Content Include="Backend\UpdateYachtList.aspx" />
+    <Content Include="Backend\UpdateYachtModel.aspx" />
+    <Content Include="Backend\UpdateYachtPhoto.aspx" />
+    <Content Include="Backend\YachtList.aspx" />
+    <Content Include="Backend\YachtModel.aspx" />
+    <Content Include="Backend\YachtPhoto.aspx" />
+    <Content Include="Frontend\company01.aspx" />
+    <Content Include="Frontend\contact.aspx" />
+    <Content Include="Frontend\dealers.aspx" />
+    <Content Include="Frontend\index.aspx" />
+    <Content Include="Frontend\MailForm.html" />
+    <Content Include="Frontend\news_list.aspx" />
+    <Content Include="Frontend\news_detail.aspx" />
+    <Content Include="Frontend\yacht_overview.aspx" />
+    <Content Include="Frontend\yacht_layout.aspx" />
+    <Content Include="Frontend\Pagination.ascx" />
+    <Content Include="Frontend\yacht_specification.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="Backend\Scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="Backend\Scripts\ckeditor\build-config.js" />
+    <Content Include="Backend\Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Backend\Scripts\ckeditor\config.js" />
+    <Content Include="Backend\Scripts\ckeditor\contents.css" />
+    <Content Include="Backend\Scripts\ckeditor\lang\af.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ar.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\bg.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\bn.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\bs.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ca.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\cs.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\cy.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\da.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\de.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\el.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\en-au.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\en.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\eo.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\es.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\et.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\eu.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\fa.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\fi.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\fo.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\fr.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\gl.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\gu.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\he.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\hi.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\hr.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\hu.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\id.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\is.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\it.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ja.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ka.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\km.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ko.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ku.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\lt.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\lv.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\mk.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\mn.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ms.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\nb.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\nl.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\no.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\pl.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\pt.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ro.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ru.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\si.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\sk.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\sl.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\sq.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\sr.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\sv.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\th.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\tr.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\ug.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\uk.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\vi.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="Backend\Scripts\ckeditor\lang\zh.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\fakeobjects\images\spacer.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\icons.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\preview\preview.html" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\dialogs\tmp.html" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Backend\Scripts\ckeditor\samples\ajax.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\api.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\appendto.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="Backend\Scripts\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Backend\Scripts\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="Backend\Scripts\ckeditor\samples\assets\sample.css" />
+    <Content Include="Backend\Scripts\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="Backend\Scripts\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="Backend\Scripts\ckeditor\samples\datafiltering.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\divreplace.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\index.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\inlineall.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\inlinebycode.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\jquery.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\readonly.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\replacebyclass.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\replacebycode.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\sample.css" />
+    <Content Include="Backend\Scripts\ckeditor\samples\sample.js" />
+    <Content Include="Backend\Scripts\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="Backend\Scripts\ckeditor\samples\tabindex.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\uicolor.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\uilanguages.html" />
+    <Content Include="Backend\Scripts\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\dialog_opera.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\editor.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\icons.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Backend\Scripts\ckeditor\skins\moono\readme.md" />
+    <Content Include="Backend\Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="Backend\Scripts\ckeditor\README.md" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Backend\Scripts\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Backend\Scripts\ckeditor\LICENSE.md" />
+    <Content Include="Backend\Scripts\ckeditor\composer.json" />
+    <Content Include="Backend\Scripts\ckeditor\CHANGES.md" />
+    <Content Include="Backend\Scripts\ckeditor\bower.json" />
+    <Content Include="Backend\CheckAccount.ashx" />
+    <Content Include="Backend\GetRegion.ashx" />
+    <Content Include="Backend\Yachts.master" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Backend\Scripts\ckeditor\styles.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backend\AddCountry.aspx.cs">
+      <DependentUpon>AddCountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddCountry.aspx.designer.cs">
+      <DependentUpon>AddCountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddRegion.aspx.cs">
+      <DependentUpon>AddRegion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddRegion.aspx.designer.cs">
+      <DependentUpon>AddRegion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddYachtList.aspx.cs">
+      <DependentUpon>AddYachtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddYachtList.aspx.designer.cs">
+      <DependentUpon>AddYachtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddYachtModel.aspx.cs">
+      <DependentUpon>AddYachtModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddYachtModel.aspx.designer.cs">
+      <DependentUpon>AddYachtModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddYachtLayout.aspx.cs">
+      <DependentUpon>AddYachtLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddYachtLayout.aspx.designer.cs">
+      <DependentUpon>AddYachtLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddYachtOverView.aspx.cs">
+      <DependentUpon>AddYachtOverView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddYachtOverView.aspx.designer.cs">
+      <DependentUpon>AddYachtOverView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddYachtPhoto.aspx.cs">
+      <DependentUpon>AddYachtPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddYachtPhoto.aspx.designer.cs">
+      <DependentUpon>AddYachtPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddYachtSpecification.aspx.cs">
+      <DependentUpon>AddYachtSpecification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddYachtSpecification.aspx.designer.cs">
+      <DependentUpon>AddYachtSpecification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Backstage.Master.cs">
+      <DependentUpon>Backstage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\Backstage.Master.designer.cs">
+      <DependentUpon>Backstage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddDealers.aspx.cs">
+      <DependentUpon>AddDealers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddDealers.aspx.designer.cs">
+      <DependentUpon>AddDealers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\BackstagePagination.ascx.cs">
+      <DependentUpon>BackstagePagination.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\BackstagePagination.ascx.designer.cs">
+      <DependentUpon>BackstagePagination.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\CheckAccount.ashx.cs">
+      <DependentUpon>CheckAccount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\CountryList.aspx.cs">
+      <DependentUpon>CountryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\CountryList.aspx.designer.cs">
+      <DependentUpon>CountryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\DealersList.aspx.cs">
+      <DependentUpon>DealersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\DealersList.aspx.designer.cs">
+      <DependentUpon>DealersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\GetRegion.ashx.cs">
+      <DependentUpon>GetRegion.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\AddNews.aspx.cs">
+      <DependentUpon>AddNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\AddNews.aspx.designer.cs">
+      <DependentUpon>AddNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\RegionList.aspx.cs">
+      <DependentUpon>RegionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\RegionList.aspx.designer.cs">
+      <DependentUpon>RegionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\UpdateDealers.aspx.cs">
+      <DependentUpon>UpdateDealers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\UpdateDealers.aspx.designer.cs">
+      <DependentUpon>UpdateDealers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\UpdateNews.aspx.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\UpdateNews.aspx.designer.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\UpdateYachtList.aspx.cs">
+      <DependentUpon>UpdateYachtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\UpdateYachtList.aspx.designer.cs">
+      <DependentUpon>UpdateYachtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\UpdateYachtModel.aspx.cs">
+      <DependentUpon>UpdateYachtModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\UpdateYachtModel.aspx.designer.cs">
+      <DependentUpon>UpdateYachtModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\UpdateYachtPhoto.aspx.cs">
+      <DependentUpon>UpdateYachtPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\UpdateYachtPhoto.aspx.designer.cs">
+      <DependentUpon>UpdateYachtPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\YachtList.aspx.cs">
+      <DependentUpon>YachtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\YachtList.aspx.designer.cs">
+      <DependentUpon>YachtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\YachtModel.aspx.cs">
+      <DependentUpon>YachtModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\YachtModel.aspx.designer.cs">
+      <DependentUpon>YachtModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\YachtPhoto.aspx.cs">
+      <DependentUpon>YachtPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\YachtPhoto.aspx.designer.cs">
+      <DependentUpon>YachtPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Yachts.master.cs">
+      <DependentUpon>Yachts.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\Yachts.master.designer.cs">
+      <DependentUpon>Yachts.master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Company.master.cs">
+      <DependentUpon>Company.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\Company.master.designer.cs">
+      <DependentUpon>Company.master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\company01.aspx.cs">
+      <DependentUpon>company01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\company01.aspx.designer.cs">
+      <DependentUpon>company01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Dealers.master.cs">
+      <DependentUpon>Dealers.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\Dealers.master.designer.cs">
+      <DependentUpon>Dealers.master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\dealers.aspx.cs">
+      <DependentUpon>dealers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\dealers.aspx.designer.cs">
+      <DependentUpon>dealers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\News.master.cs">
+      <DependentUpon>News.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\News.master.designer.cs">
+      <DependentUpon>News.master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\news_list.aspx.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\news_list.aspx.designer.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\news_detail.aspx.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\news_detail.aspx.designer.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Pagination.ascx.cs">
+      <DependentUpon>Pagination.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\Pagination.ascx.designer.cs">
+      <DependentUpon>Pagination.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Tayana.Master.cs">
+      <DependentUpon>Tayana.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\Tayana.Master.designer.cs">
+      <DependentUpon>Tayana.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Yachts.master.cs">
+      <DependentUpon>Yachts.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\Yachts.master.designer.cs">
+      <DependentUpon>Yachts.master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\yacht_overview.aspx.cs">
+      <DependentUpon>yacht_overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\yacht_overview.aspx.designer.cs">
+      <DependentUpon>yacht_overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\yacht_layout.aspx.cs">
+      <DependentUpon>yacht_layout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\yacht_layout.aspx.designer.cs">
+      <DependentUpon>yacht_layout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\yacht_specification.aspx.cs">
+      <DependentUpon>yacht_specification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\yacht_specification.aspx.designer.cs">
+      <DependentUpon>yacht_specification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Userinformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Backend\Backstage.Master" />
+    <Content Include="Frontend\Tayana.Master" />
+    <Content Include="Frontend\Yachts.master" />
+    <Content Include="Frontend\News.master" />
+    <Content Include="Frontend\Company.master" />
+    <Content Include="Frontend\Dealers.master" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2170</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

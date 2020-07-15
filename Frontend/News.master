@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Frontend/Tayana.Master" AutoEventWireup="true" CodeBehind="News.master.cs" Inherits="Tayana.Frontend.News" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" type="text/css" href="css/pagination.css">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
+    <!--遮罩-->
+    <div class="bannermasks">
+        <img src="images/banner02_masks.png" alt="&quot;&quot;" />
+    </div>
+    <!--遮罩結束-->
+    <!--------------------------------換圖開始---------------------------------------------------->
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="images/newbanner.jpg" alt="Tayana Yachts" />
+            </li>
+        </ul>
+    </div>
+    <!--------------------------------換圖結束---------------------------------------------------->
+    <div class="conbg">
+        <!--------------------------------左邊選單開始---------------------------------------------------->
+        <div class="left">
+            <div class="left1">
+                <p><span>NEWS</span></p>
+                <ul>
+                    <li>
+                        <a href="#">News & Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--------------------------------左邊選單結束---------------------------------------------------->
+
+        <!--------------------------------右邊選單開始---------------------------------------------------->
+        <div id="crumb"><a href="#">Home</a> >> <a href="#">News </a>>> <a href="#"><span class="on1">News & Events</span></a></div>
+        <div class="right">
+            <div class="right1">
+                <div class="title">
+                    <span>News & Events</span>
+                </div>
+                <!--------------------------------內容開始---------------------------------------------------->
+                <asp:ContentPlaceHolder ID="newsContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--------------------------------內容結束---------------------------------------------------->
+            </div>
+        </div>
+        <!--------------------------------右邊選單結束---------------------------------------------------->
+    </div>
+</asp:Content>

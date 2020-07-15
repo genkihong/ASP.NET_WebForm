@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+
+	#abgne-block-20110111 {
+	width: 600px;
+	}
+	#abgne-block-20110111 .info {
+		display: none;
+	}
+	#abgne-block-20110111 .on {
+		display: block;
+	}
+	#abgne-block-20110111 .title {
+
+	}
+	#abgne-block-20110111 .title li {
+	cursor: pointer;
+	float: left;
+	background-image: url(../images/changbg1.gif);
+	background-repeat: no-repeat;
+	background-position: 9px 0px;
+	height: 70px;
+	width: 103px;
+	}
+	#abgne-block-20110111 .title li.on, #abgne-block-20110111 .title li.over {
+	background-image: url(../images/changbg.gif);
+	background-repeat: no-repeat;
+	background-position: 9px 0px;
+	height: 70px;
+	width: 103px;
+
+	}
+	
+	
+	
+	
+	a img {
+		border: none;
+	}
+	#abgne_fade_pic {
+	position: relative;
+	border: 1px solid #ccc;
+	}
+	#abgne_fade_pic a.ad {
+		position: absolute;	/* 讓圖片疊在一起 */
+	}
+	#abgne_fade_pic .control {
+	position: absolute;
+	}
+	#abgne_fade_pic .control a {
+	text-decoration: none;
+	}
+	#abgne_fade_pic .control a.on {
+
+	}

@@ -1,0 +1,387 @@
+﻿@charset "utf-8";
+
+@import url("js.css");
+
+img, div, input { 
+	behavior: url("css/iepngfix.htc"); 
+
+}
+
+body {
+	margin-top: 0px;
+	background-image: url(../images/bg1.jpg);
+	behavior: url("css/csshover.htc");
+	height: 100%;
+	background-repeat: repeat-x;
+	background-color: #f3f3f3;
+}
+.contain {
+	width: 1002px;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	background-color: #FFFFFF;
+	position: relative;
+}
+#logol {
+	position: absolute;
+	top: 23px;
+	left: 0px;
+}
+.sub {
+	float: left;
+	height: 23px;
+	width: 100%;
+	background-image: url(../images/sub_bg.gif);
+	background-repeat: repeat-x;
+}
+.sub a {
+	color: #929292;
+	text-decoration: none;
+	background-repeat: no-repeat;
+}
+.sub a:hover {
+	color: #00b4e7;
+}
+
+.sub p {
+	float: right;
+	padding-right: 18px;
+	padding-top: 3px;
+	background-image: url(../images/icon001.gif);
+	background-repeat: no-repeat;
+	background-position: 1px 6px;
+	padding-left: 18px;
+}
+.menu {
+	background-image: url(../images/menu.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 71px;
+	width: 100%;
+}
+.menu ul {
+	float: right;
+}
+.menu li {
+	float: left;
+	display: block;
+	height: 71px;
+	color: #F6F6F6;
+	font-size: 0px;
+}
+
+.menu a {
+	color: #F6F6F6;
+	text-decoration: none;
+	display: block;
+	height: 71px;
+}
+.menuli01  {
+	background-image: url(../images/menu1_03.gif);
+	width: 80px;
+	float: left;
+}
+.menuli01:hover {
+	background-image: url(../images/menu2_03.gif);
+}
+.menuli02 {
+	background-image: url(../images/menu1_04.gif);
+	width: 79px;
+	float: left;
+}
+.menuli02:hover {
+	background-image: url(../images/menu2_04.gif);
+}
+.menuli03 {
+	background-image: url(../images/menu1_05.gif);
+	width: 99px;
+	float: left;
+}
+.menuli03:hover {
+	background-image: url(../images/menu2_05.gif);
+}
+.menuli04 {
+	background-image: url(../images/menu1_06.gif);
+	width: 89px;
+	float: left;
+}
+.menuli04:hover {
+	background-image: url(../images/menu2_06.gif);
+}
+.menuli05 {
+	background-image: url(../images/menu1_07.gif);
+	width: 95px;
+	float: left;
+}
+.menuli05:hover {
+	background-image: url(../images/menu2_07.gif);
+}
+.banner {
+	float: left;
+	width: 966px;
+	padding-left: 19px;
+	margin-top: 19px;
+}
+.banner01 {
+	float: left;
+	height: 424px;
+	width: 969px;
+	overflow: hidden;
+}
+.news {
+	width: 1002px;
+	margin-top: 18px;
+	float: left;
+}
+.news a {
+	color: #727272;
+	text-decoration: none;
+}
+.news a:hover {
+	color: #02A5B8;
+}
+.newstitle {
+	float: left;
+	width: 100%;
+}
+.newstitlep1 {
+	float: left;
+	padding-left: 22px;
+}
+.newstitlep2 {
+	float: right;
+	padding-right: 19px;
+	font-size: 90%;
+}
+.newstitlep2 a:hover {
+}
+
+.newstitlep2 a {
+	color: #02a5b8;
+	text-decoration: none;
+}
+
+.news ul {
+	float: left;
+	margin-top: 15px;
+	width: 100%;
+}
+
+.news li {
+	float: left;
+	padding-left: 22px;
+}
+.newstop {
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+.news01 {
+	background-color: #FFFFFF;
+	padding: 12px;
+	border: 1px solid #d7d7d7;
+	font-size: 90%;
+	float: left;
+	position: relative;
+}
+
+.news02 {
+	background-color: #eeebdc;
+	padding: 12px;
+	font-size: 90%;
+	float: left;
+	position: relative;
+}
+.news02p1, .news01p1 {
+	padding: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid #b5b5b5;
+	float: left;
+}
+.news02p1img, .news01p1img {
+	height: 95px;
+	width: 95px;
+	overflow: hidden;
+}
+
+.news02p1img img, .news01p1img img {
+	height: 95px;
+	width: 95px;
+}
+
+.news02p2 {
+	padding-left: 10px;
+	width: 165px;
+	float: left;
+	color: #02a5b8;
+}
+.news02  span, .news01 span {
+	font-weight: bold;
+	color: #447d90;
+	margin-bottom: 6px;
+	display: block;
+}
+.footerp00 {
+	float: left;
+	width: 330px;
+	padding-left: 19px;
+	padding-top: 10px;
+}
+.footerp00 p {
+	float: left;
+}
+
+.footerp00 span {
+	color: #3499F2;
+	float: left;
+	margin-top: 7px;
+	padding-left: 10px;
+}
+
+.footerp001 {
+	color: #0099FF;
+	float: left;
+	width: 350px;
+}
+
+
+.footerp01 {
+	color: #009DB3;
+	float: left;
+	padding-left: 27px;
+	padding-top: 45px;
+	margin-top: 45px;
+}
+.footer01 {
+	float: right;
+	width: 600px;
+	text-align: right;
+	padding-right: 9px;
+	margin-top: 15px;
+	color: #727272;
+	line-height: 150%;
+}
+.footer01 a {
+	color: #727272;
+	text-decoration: none;
+}
+.footer01 a:hover {
+	color: #009BB2;
+}
+.footer01 span {
+	background-image: url(../images/icon002.gif);
+	background-repeat: no-repeat;
+	background-position: 2px 7px;
+	padding-left: 11px;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+/*換圖*/
+.banner {
+	float: left;
+	width: 966px;
+	margin-top: 19px;
+	padding-left: 18px;
+	height: 424px;
+	overflow: hidden;
+}
+
+.bannermasks {
+	height: 424px;
+	width: 966px;
+	position: absolute;
+	left: 18px;
+	top: 113px;
+	z-index: 1;
+	float: right;
+}
+
+.bannerimg {
+	position: absolute;
+	top: 460px;
+	z-index: 7;
+	width: 680px;
+	height: 70px;
+	overflow: hidden;
+	right: 27px;
+}
+.bannerimg li {
+	float: right;
+	padding-left: 9px;
+}
+.bannerimg_s {
+	float: right;
+	height: 59px;
+	width: 99px;
+	overflow: hidden;
+}
+.bannerimg_p  {
+	float: left;
+	margin-top: 9px;
+	padding-left: 2px;
+	height: 59px;
+	width: 99px;
+	overflow: hidden;
+}
+.bannerimg  li  a {
+	background-image: url(../images/changbg1.gif);
+	background-repeat: no-repeat;
+	float: left;
+	width: 103px;
+	background-position: left top;
+	height: 70px;
+	display: block;
+}
+.bannerimg       li       a:hover   {
+	background-image: url(../images/changbg.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	float: left;
+	height: 70px;
+	width: 103px;
+}
+.on    {
+	background-image: url(../images/changbg.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 103px;
+	height: 70px;
+	display: block;
+	float: left;
+	z-index: 15;
+}
+.wordtitle {
+	position: absolute;
+	top: 450px;
+	font-size: 160%;
+	color: #FFFFFF;
+	z-index: 15;
+	width: 230px;
+	font-style: italic;
+	font-weight: bold;
+	right: 35px;
+}
+.wordtitle h2 {
+	color: #FFFFFF;
+}
+.wordtitle span {
+	color: #ff9711;
+	font-size: 140%;
+}
+.wordtitle p {
+	color: #9da09d;
+	font-size: 75%;
+	padding-left: 15px;
+}
+.new {
+	position: absolute;
+	left: 18px;
+	top: 113px;
+	z-index: 20;	
+}
+.new.show {
+	display: block;
+}
